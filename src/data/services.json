@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "commercial-vehicles",
+    "title": "Truck Accidents",
+    "tagline": "Hit by an 18-Wheeler or Commercial Vehicle? You May Be Eligible for a High-Value Settlement.",
+    "description": "Collisions with semi-trucks and commercial vehicles are some of the most devastating. These cases involve complex liability — multiple parties like trucking companies, insurers, and logistics providers.",
+    "icon": "/images/services/truck-icon.png",
+    "alt": "Truck accident attorney"
+  },
+  {
+    "slug": "pedestrian-accidents",
+    "title": "Pedestrian Accidents",
+    "tagline": "Struck by a Vehicle While Walking? Know Your Rights as a Pedestrian.",
+    "description": "Drivers are legally required to yield to pedestrians. But when they don't, the consequences can be life-altering. If you or a loved one were hit while walking, jogging, or crossing the street, we can connect you with a skilled pedestrian accident attorney.",
+    "icon": "/images/services/pedestrian-icon.png",
+    "alt": "Pedestrian accident attorney"
+  },
+  {
+    "slug": "motorcycle-injury",
+    "title": "Motorcycle Accidents",
+    "tagline": "Motorcyclist Injuries Are Often Severe. We'll Fight to Get You Full Compensation.",
+    "description": "Motorcyclists face unique dangers on the road — and often, insurance companies are quick to blame the rider. Don't let that happen to you.",
+    "icon": "/images/services/motorcycle-icon.png",
+    "alt": "Motorcycle accident attorney"
+  },
+  {
+    "slug": "rideshare-accidents",
+    "title": "Rideshare Accidents",
+    "tagline": "Injured in an Uber or Lyft? Don't Get Stuck in Insurance Limbo.",
+    "description": "Accidents involving rideshare vehicles are confusing. Was the driver on the clock? Whose insurance applies? What if you're the passenger? We'll connect you with an attorney who knows the rideshare landscape.",
+    "icon": "/images/services/rideshare-icon.png",
+    "alt": "Rideshare accident attorney"
+  }
+]

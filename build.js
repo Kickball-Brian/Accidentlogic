@@ -12,8 +12,10 @@ const env = nunjucks.configure(path.join(__dirname, 'src'), {
 // Globals available to every template
 const siteData = require('./src/data/site.json');
 const phoneData = require('./src/data/phones.json');
+const servicesData = require('./src/data/services.json');
 env.addGlobal('site', siteData);
 env.addGlobal('phones', phoneData);
+env.addGlobal('services', servicesData);
 
 const distDir = path.join(__dirname, 'dist');
 const distCssDir = path.join(distDir, 'css');

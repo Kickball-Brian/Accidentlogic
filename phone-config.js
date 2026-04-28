@@ -14,6 +14,9 @@
   var CONFIG = {
     default: { raw: '8776651553', formatted: '877-665-1553' },
     landingPages: {
+      // Match rule: key === path  OR  path starts with key + '/'.
+      // (So '/' here matches ONLY the homepage, not every path.)
+      '/':           { raw: '8332007101', formatted: '833-200-7101' },
       // '/lp/example': { raw: '8005551234', formatted: '800-555-1234' }
     }
   };
@@ -31,11 +34,16 @@
   }
 
   function pickPhone(path) {
+    // Normalize: strip trailing slash (except root)
+    var p = path.length > 1 ? path.replace(/\/$/, '') : path;
     var keys = Object.keys(CONFIG.landingPages).sort(function (a, b) {
       return b.length - a.length;
     });
     for (var i = 0; i < keys.length; i++) {
-      if (path.indexOf(keys[i]) === 0) return CONFIG.landingPages[keys[i]];
+      var k = keys[i].length > 1 ? keys[i].replace(/\/$/, '') : keys[i];
+      if (p === k || (k !== '/' && p.indexOf(k + '/') === 0)) {
+        return CONFIG.landingPages[keys[i]];
+      }
     }
     return CONFIG.default;
   }

@@ -1,18 +1,124 @@
 {% extends "../layouts/base.njk" %}
-{% block title %}{{ site.name }} | Accident Case Evaluation{% endblock %}
-{% block description %}{{ site.description }}{% endblock %}
+
+{% block title %}Free Car Accident Lawyer Consultation | {{ site.name }}{% endblock %}
+{% block description %}Involved in an accident? AccidentLogic connects you with attorneys who fight for your maximum compensation. Free, fast case evaluation — no obligation.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}">{% endblock %}
 
-{% block content %}
-{# Placeholder homepage — content ported from accidentlogic.com in Phase 3. #}
-<section class="hero">
-  <div class="container">
-    <h1>{{ site.name }}</h1>
-    <p>{{ site.description }}</p>
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Free Car Accident Lawyer Consultation",
+  "url": "{{ site.productionUrl }}",
+  "description": "Connect with experienced accident attorneys nationwide. Free case evaluation.",
+  "isPartOf": { "@type": "WebSite", "url": "{{ site.productionUrl }}" }
+}
+</script>
+{% endblock %}
 
-    {# Lead form — replaces all forms except CCPA per spec #}
-    <script src="/form.min.js?ver=1"></script>
-    <div id="ll-form"></div>
+{% block content %}
+
+{# ── Hero ── #}
+<section class="hero">
+  <div class="hero_bg">
+    <video class="hero_video" autoplay muted loop playsinline poster="/images/home/hero-bg.png">
+      <source src="/images/home/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero_overlay"></div>
+  </div>
+  <div class="container hero_inner">
+    <div class="hero_copy">
+      <p class="hero_eyebrow">
+        Call Today!
+        <a href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel>
+          <span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span>
+        </a>
+      </p>
+      <h1 class="hero_title">Involved in an Accident?</h1>
+      <p class="hero_subtitle">Find a lawyer who has the resources and experience to fight for your compensation.</p>
+    </div>
+    <div class="hero_form" id="form">
+      <script src="/form.min.js?ver=1"></script>
+      <div id="ll-form"></div>
+    </div>
+  </div>
+</section>
+
+{# ── Intro ── #}
+<section class="section section--padded">
+  <div class="container narrow">
+    <h2>Were you involved in a motor vehicle accident? We can help!</h2>
+    <p>A car accident can turn your life upside down in an instant. One driver's carelessness leaves you dealing with hospital visits, mounting medical bills, and costly car repairs—all while missing work. In some cases, the injuries are severe or even life-changing, and tragically, some may lose a loved one. Meanwhile, the insurance adjuster is focused on settling your claim for as little as possible.</p>
+  </div>
+</section>
+
+{# ── How It Works ── #}
+<section class="section section--padded section--alt">
+  <div class="container">
+    <h2 class="section_heading section_heading--center">How It Works</h2>
+    <ol class="steps">
+      <li class="step">
+        <div class="step_number">1</div>
+        <h3 class="step_title">Start by Filling Out the Form Above</h3>
+        <p>Provide basic details about your accident and injuries.</p>
+      </li>
+      <li class="step">
+        <div class="step_number">2</div>
+        <h3 class="step_title">Get Matched with an Attorney</h3>
+        <p>We connect you with a legal professional specializing in motor vehicle accident claims.</p>
+      </li>
+      <li class="step">
+        <div class="step_number">3</div>
+        <h3 class="step_title">Wait for Your Compensation</h3>
+        <p>Your lawyer will handle negotiations and get you the compensation you deserve.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{# ── Why hire an attorney ── #}
+<section class="section section--padded">
+  <div class="container narrow">
+    <h2>Find An Attorney Who Will Fight For You</h2>
+    <p class="lead">Getting an attorney after an auto accident is crucial for several reasons:</p>
+    <ul class="reasons">
+      <li><strong>Maximize Your Compensation</strong> — Insurance companies aim to settle claims for the lowest possible amount. An attorney can negotiate to ensure you receive fair compensation for medical bills, lost wages, pain and suffering, and property damage.</li>
+      <li><strong>Dealing with Severe Injuries</strong> — If you've suffered serious injuries, long-term medical care and future losses must be considered in your settlement.</li>
+      <li><strong>Proving Liability</strong> — Establishing fault can be complex, especially if the other party disputes it. A lawyer gathers evidence, speaks with witnesses, and works with experts to strengthen your case.</li>
+      <li><strong>Handling Insurance Companies</strong> — Insurers often use tactics to minimize payouts or deny claims. An attorney protects your rights and ensures you don't accept a lowball offer.</li>
+      <li><strong>Understanding Legal Deadlines</strong> — Every state has a statute of limitations for filing a claim. A lawyer ensures you meet all deadlines.</li>
+      <li><strong>Litigation if Necessary</strong> — If a fair settlement isn't offered, an attorney can take your case to court and advocate on your behalf.</li>
+    </ul>
+    <p>Hiring an attorney levels the playing field against insurance companies and ensures your rights are protected while you focus on recovery.</p>
+  </div>
+</section>
+
+{# ── Service tiles ── #}
+<section class="section section--padded section--alt">
+  <div class="container">
+    <h2 class="section_heading section_heading--center">We Help With More Than Just Car Accidents.</h2>
+    <p class="section_lead">At Accident Logic, we understand that no two accidents are the same — and neither are the challenges that come with them. Our network of experienced attorneys is equipped to handle a wide range of accident cases.</p>
+    <div class="service_grid">
+      {% for s in services %}
+      <a href="/{{ s.slug }}" class="service_card">
+        <img src="{{ s.icon }}" alt="{{ s.alt }}" loading="lazy" width="120" height="120">
+        <h3 class="service_card_title">{{ s.title }}</h3>
+        <p class="service_card_tagline">{{ s.tagline }}</p>
+        <p class="service_card_desc">{{ s.description }}</p>
+        <span class="service_card_link">Learn more →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ── Final CTA ── #}
+<section class="section section--padded section--cta">
+  <div class="container">
+    <h2>Get Your Free Case Evaluation</h2>
+    <p>Call <a href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel><span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span></a> or fill out the form to get started.</p>
+    <a href="#form" class="button">Start Your Claim</a>
   </div>
 </section>
 {% endblock %}

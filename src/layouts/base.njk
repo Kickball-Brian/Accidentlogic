@@ -62,6 +62,17 @@
   {% include "../partials/footer.njk" %}
 
   <script src="/phone-config.js"></script>
+  <script>
+    (function () {
+      var btn = document.querySelector('.navbar_hamburger');
+      var nav = document.querySelector('.navbar');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
