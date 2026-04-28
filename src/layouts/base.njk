@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ site.name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  {# STAGING: indexing disabled until prod push. Flip site.indexable to true and remove this meta to re-enable. #}
+  <meta name="robots" content="noindex, nofollow">
+  {% block canonical %}<link rel="canonical" href="{{ site.url }}">{% endblock %}
+  <link rel="stylesheet" href="/css/main.css">
+  {% block head %}{% endblock %}
+
+  {# JSON-LD: WebSite #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.name }}",
+    "url": "{{ site.productionUrl }}",
+    "description": "{{ site.description }}",
+    "inLanguage": "en-US"
+  }
+  </script>
+
+  {# JSON-LD: Organization / LegalService #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "LegalService"],
+    "name": "{{ site.name }}",
+    "url": "{{ site.productionUrl }}",
+    "email": "{{ site.email }}",
+    "telephone": "+1{{ site.defaultPhone }}",
+    "description": "{{ site.description }}",
+    "areaServed": { "@type": "Country", "name": "{{ site.areaServed }}" }
+  }
+  </script>
+
+  {# Page-specific schema (override per template) #}
+  {% block schema %}{% endblock %}
+
+  {% if site.gtmId %}
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-{{ site.gtmId }}');</script>
+  {% endif %}
+</head>
+<body class="page-wrapper">
+  {% if site.gtmId %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-{{ site.gtmId }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% endif %}
+
+  {% include "../partials/navbar.njk" %}
+  <main class="main-wrapper">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "../partials/footer.njk" %}
+
+  <script src="/phone-config.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

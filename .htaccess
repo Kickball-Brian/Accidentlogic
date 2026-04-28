@@ -1,0 +1,16 @@
+# AccidentLogic — staging
+# Send X-Robots-Tag noindex for ALL responses while on staging.
+# Remove this header block before production push.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# Pretty URLs: serve /foo from /foo/index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^/]+)/?$ $1/index.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html

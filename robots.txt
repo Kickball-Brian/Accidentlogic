@@ -1,0 +1,5 @@
+# robots.txt — AccidentLogic (STAGING)
+# Indexing disabled. Replace with allow-all before production push.
+
+User-agent: *
+Disallow: /

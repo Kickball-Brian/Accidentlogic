@@ -1,0 +1,16 @@
+{
+  "name": "accidentlogic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node server.js",
+    "dev": "node build.js && node server.js"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

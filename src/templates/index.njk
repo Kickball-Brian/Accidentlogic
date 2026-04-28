@@ -1,0 +1,18 @@
+{% extends "../layouts/base.njk" %}
+{% block title %}{{ site.name }} | Accident Case Evaluation{% endblock %}
+{% block description %}{{ site.description }}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}">{% endblock %}
+
+{% block content %}
+{# Placeholder homepage — content ported from accidentlogic.com in Phase 3. #}
+<section class="hero">
+  <div class="container">
+    <h1>{{ site.name }}</h1>
+    <p>{{ site.description }}</p>
+
+    {# Lead form — replaces all forms except CCPA per spec #}
+    <script src="/form.min.js?ver=1"></script>
+    <div id="ll-form"></div>
+  </div>
+</section>
+{% endblock %}

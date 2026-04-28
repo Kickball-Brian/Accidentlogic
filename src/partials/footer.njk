@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer_inner">
+    <div class="footer_brand">{{ site.name }}</div>
+    <div class="footer_contact">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      &nbsp;·&nbsp;
+      <a href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel>
+        <span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span>
+      </a>
+    </div>
+    <div class="footer_legal">
+      <a href="/privacy">Privacy</a> ·
+      <a href="/terms">Terms</a> ·
+      <a href="/ccpa">CCPA</a>
+    </div>
+    <div class="footer_copyright">&copy; {{ site.name }}. All rights reserved.</div>
+  </div>
+</footer>

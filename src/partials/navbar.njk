@@ -1,0 +1,15 @@
+<nav class="navbar" aria-label="Main">
+  <div class="navbar_inner">
+    <a href="/" class="navbar_brand">{{ site.name }}</a>
+    <button class="navbar_hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navbar_links">
+      <a href="/" class="navbar_link">Home</a>
+      {# Interior links populated in phase 4 #}
+    </div>
+    <a class="navbar_cta" href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel>
+      <span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span>
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,13 @@
+{
+  "default": {
+    "raw": "8776651553",
+    "formatted": "877-665-1553"
+  },
+  "landingPages": {
+    "_comment": "Map first-touch landing page path -> override phone number. Match is exact path or prefix; longest match wins. Example: '/lp/uber' will override the nav phone for any visitor whose first-visit path begins with /lp/uber.",
+    "/lp/example": {
+      "raw": "8005551234",
+      "formatted": "800-555-1234"
+    }
+  }
+}

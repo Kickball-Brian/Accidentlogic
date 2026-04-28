@@ -1,0 +1,28 @@
+/* AccidentLogic — base styles. Real design system lands during Phase 3 content port. */
+*,*::before,*::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; color: #1a1a1a; }
+a { color: #0a58ca; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+.main-wrapper { min-height: 60vh; }
+
+.navbar_inner, .footer_inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; max-width: 1200px; margin: 0 auto; }
+.navbar { border-bottom: 1px solid #eee; }
+.navbar_brand, .footer_brand { font-weight: 700; font-size: 1.125rem; }
+.navbar_links { display: flex; gap: 1.25rem; }
+.navbar_cta { font-weight: 600; }
+.navbar_hamburger { display: none; background: none; border: 0; }
+
+.footer { border-top: 1px solid #eee; margin-top: 4rem; }
+.footer_inner { flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; color: #555; }
+
+.hero { padding: 4rem 0; }
+.hero h1 { font-size: 2.5rem; margin: 0 0 1rem; }
+
+#ll-form { margin-top: 2rem; }
+
+@media (max-width: 720px) {
+  .navbar_links { display: none; }
+  .navbar_hamburger { display: inline-block; }
+}

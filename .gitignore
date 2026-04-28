@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+~$*
+*.lock
+.env
+_crawl/
+# Pre-build working assets (raw, unoptimized)
+accidentlogic-hero.xcf
+*.psd

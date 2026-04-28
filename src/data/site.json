@@ -1,0 +1,20 @@
+{
+  "name": "AccidentLogic",
+  "legalName": "AccidentLogic",
+  "url": "https://staging.accidentlogic.com/",
+  "productionUrl": "https://accidentlogic.com/",
+  "description": "AccidentLogic connects accident victims with experienced attorneys nationwide. Free, fast case evaluations.",
+  "email": "info@lawlogic.com",
+  "defaultPhone": "8776651553",
+  "defaultPhoneFormatted": "877-665-1553",
+  "address": {
+    "streetAddress": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "postalCode": "",
+    "addressCountry": "US"
+  },
+  "areaServed": "United States",
+  "indexable": false,
+  "gtmId": ""
+}
