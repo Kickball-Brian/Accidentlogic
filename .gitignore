@@ -5,6 +5,10 @@ dist/
 *.lock
 .env
 _crawl/
-# Pre-build working assets (raw, unoptimized)
+# Pre-build working assets (raw, unoptimized) — kept locally only
 accidentlogic-hero.xcf
+accidentlogic-hero.png
+accidentlogic-hero-v2.png
+accidentlogic-hero-bg.mp4
+AccidentLogic_UIUX_Audit.xlsx
 *.psd
