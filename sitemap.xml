@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Stub — populated in Phase 4 once interior pages are ported. -->
+<!-- AccidentLogic — staging sitemap. Production URLs once site goes live. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://accidentlogic.com/</loc>
-  </url>
+  <url><loc>https://accidentlogic.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://accidentlogic.com/rideshare-accidents/</loc><priority>0.9</priority></url>
+  <url><loc>https://accidentlogic.com/pedestrian-accidents/</loc><priority>0.9</priority></url>
+  <url><loc>https://accidentlogic.com/motorcycle-injury/</loc><priority>0.9</priority></url>
+  <url><loc>https://accidentlogic.com/commercial-vehicles/</loc><priority>0.9</priority></url>
+  <url><loc>https://accidentlogic.com/privacy-policy/</loc><priority>0.3</priority></url>
+  <url><loc>https://accidentlogic.com/terms-conditions/</loc><priority>0.3</priority></url>
+  <url><loc>https://accidentlogic.com/ccpa-policy/</loc><priority>0.3</priority></url>
+  <url><loc>https://accidentlogic.com/ccpa/</loc><priority>0.3</priority></url>
+  <url><loc>https://accidentlogic.com/opt-out/</loc><priority>0.2</priority></url>
 </urlset>

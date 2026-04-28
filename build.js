@@ -57,8 +57,20 @@ console.log('Copied: images/');
 
 // Pages: [template, output path]
 const pages = [
-  ['templates/index.njk', 'index.html'],
-  ['templates/404.njk', '404.html'],
+  ['templates/index.njk',                 'index.html'],
+  ['templates/rideshare-accidents.njk',   'rideshare-accidents/index.html'],
+  ['templates/pedestrian-accidents.njk',  'pedestrian-accidents/index.html'],
+  ['templates/motorcycle-injury.njk',     'motorcycle-injury/index.html'],
+  ['templates/commercial-vehicles.njk',   'commercial-vehicles/index.html'],
+  ['templates/privacy-policy.njk',        'privacy-policy/index.html'],
+  ['templates/terms-conditions.njk',      'terms-conditions/index.html'],
+  ['templates/ccpa-policy.njk',           'ccpa-policy/index.html'],
+  ['templates/ccpa.njk',                  'ccpa/index.html'],
+  ['templates/opt-out.njk',               'opt-out/index.html'],
+  ['templates/thank-you.njk',             'thank-you/index.html'],
+  ['templates/thank-you-int.njk',         'thank-you-int/index.html'],
+  ['templates/cm-thank-you.njk',          'cm-thank-you/index.html'],
+  ['templates/404.njk',                   '404.html'],
 ];
 
 pages.forEach(([templatePath, outputFile]) => {

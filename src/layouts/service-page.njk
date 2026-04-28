@@ -1,0 +1,51 @@
+{% extends "./base.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "{{ site.name }} — {{ pageTitle }}",
+  "url": "{{ site.productionUrl }}{{ slug }}/",
+  "description": "{{ pageDescription }}",
+  "areaServed": { "@type": "Country", "name": "{{ site.areaServed }}" },
+  "telephone": "+1{{ site.defaultPhone }}",
+  "email": "{{ site.email }}"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="service-hero">
+  <div class="container service-hero_inner">
+    <div class="service-hero_copy">
+      <p class="hero_eyebrow">
+        Call Today!
+        <a href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel>
+          <span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span>
+        </a>
+      </p>
+      <h1>{{ pageHeading }}</h1>
+      {% if pageSubheading %}<p class="hero_subtitle">{{ pageSubheading }}</p>{% endif %}
+    </div>
+    <div class="service-hero_form" id="form">
+      <script src="/form.min.js?ver=1"></script>
+      <div id="ll-form"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--padded">
+  <div class="container narrow article-content">
+    {% include contentInclude %}
+  </div>
+</section>
+
+<section class="section section--padded section--cta">
+  <div class="container">
+    <h2>Get Your Free Case Evaluation</h2>
+    <p>Call <a href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel><span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span></a> or fill out the form to get started.</p>
+    <a href="#form" class="button">Start Your Claim</a>
+  </div>
+</section>
+{% endblock %}

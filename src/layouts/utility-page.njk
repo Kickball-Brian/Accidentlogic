@@ -1,0 +1,10 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+<section class="section section--padded">
+  <div class="container narrow article-content">
+    {% if pageHeading %}<h1>{{ pageHeading }}</h1>{% endif %}
+    {% include contentInclude %}
+  </div>
+</section>
+{% endblock %}

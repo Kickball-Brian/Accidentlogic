@@ -1,0 +1,39 @@
+{% extends "../layouts/base.njk" %}
+{% block title %}CCPA Request Webform | {{ site.name }}{% endblock %}
+{% block description %}California residents — submit a CCPA request to access, delete, or opt out of the sale of your personal information.{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}ccpa/">{% endblock %}
+
+{% block content %}
+<section class="section section--padded">
+  <div class="container narrow article-content">
+    {% include "../content/ccpa.njk" %}
+
+    {# CCPA form preserved as the live page's existing form (per project spec, this is the
+       only page that does NOT use the standard /form.min.js lead form). The original site
+       used a Constant Contact-style form here. Replace this placeholder with the real
+       embed code when the CCPA form provider is finalized. #}
+    <form class="ccpa-form" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Submit a CCPA Request</legend>
+        <label>Full name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input type="tel" name="phone"></label>
+        <label>California ZIP code<input type="text" name="zip" pattern="[0-9]{5}" required></label>
+        <fieldset class="ccpa-form_group">
+          <legend>Request type</legend>
+          <label><input type="radio" name="request" value="know" required> Right to know</label>
+          <label><input type="radio" name="request" value="delete"> Right to delete</label>
+          <label><input type="radio" name="request" value="opt-out"> Right to opt out of sale</label>
+        </fieldset>
+        <label>Additional details<textarea name="details" rows="4"></textarea></label>
+        <label class="ccpa-form_consent">
+          <input type="checkbox" name="verify" required>
+          I confirm I am a California resident and the information above is accurate.
+        </label>
+        <button type="submit" class="button">Submit Request</button>
+      </fieldset>
+    </form>
+    <p class="ccpa-form_alt">Or email us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </div>
+</section>
+{% endblock %}

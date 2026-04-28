@@ -6,7 +6,9 @@
     </button>
     <div class="navbar_links">
       <a href="/" class="navbar_link">Home</a>
-      {# Interior links populated in phase 4 #}
+      {% for s in services %}
+      <a href="/{{ s.slug }}" class="navbar_link">{{ s.title }}</a>
+      {% endfor %}
     </div>
     <a class="navbar_cta" href="tel:+1{{ site.defaultPhone }}" data-dynamic-phone-tel>
       <span data-dynamic-phone>{{ site.defaultPhoneFormatted }}</span>

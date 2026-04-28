@@ -1,0 +1,11 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+<section class="section section--padded">
+  <div class="container narrow legal-content">
+    <h1>{{ pageHeading }}</h1>
+    {% if pageEffectiveDate %}<p class="legal-effective">Effective Date: {{ pageEffectiveDate }}</p>{% endif %}
+    {% include contentInclude %}
+  </div>
+</section>
+{% endblock %}

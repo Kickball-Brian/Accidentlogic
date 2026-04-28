@@ -14,11 +14,14 @@
   var CONFIG = {
     default: { raw: '8776651553', formatted: '877-665-1553' },
     landingPages: {
-      // Match rule: key === path  OR  path starts with key + '/'.
+      // First-touch overrides. Match rule: key === path  OR  path starts with key + '/'.
       // (So '/' here matches ONLY the homepage, not every path.)
       '/':           { raw: '8332007101', formatted: '833-200-7101' },
       // '/lp/example': { raw: '8005551234', formatted: '800-555-1234' }
-    }
+    },
+    // Pages that ALWAYS show the default phone, regardless of first-touch.
+    // Add a path here to lock it to the brand default (e.g. transactional pages).
+    forceDefaultOn: ['/thank-you-int']
   };
 
   var STORAGE_KEY = 'al_first_touch_path';
@@ -48,7 +51,14 @@
     return CONFIG.default;
   }
 
-  var phone = pickPhone(firstTouch);
+  // forceDefaultOn check uses CURRENT path, not first-touch.
+  var currentPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+  var forceDefault = (CONFIG.forceDefaultOn || []).some(function (p) {
+    var k = p.length > 1 ? p.replace(/\/$/, '') : p;
+    return currentPath === k || (k !== '/' && currentPath.indexOf(k + '/') === 0);
+  });
+
+  var phone = forceDefault ? CONFIG.default : pickPhone(firstTouch);
 
   function apply() {
     document.querySelectorAll('[data-dynamic-phone]').forEach(function (el) {

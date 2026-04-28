@@ -1,0 +1,15 @@
+{% extends "../layouts/base.njk" %}
+{% block title %}Opt Out | {{ site.name }}{% endblock %}
+{% block description %}Opt out of communications from AccidentLogic. We'll remove your information promptly.{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}opt-out/">{% endblock %}
+
+{% block content %}
+<section class="section section--padded">
+  <div class="container narrow article-content">
+    <h1>We're Sorry to See You Go</h1>
+    <p>Please complete the form below to remove your information from our systems. Once submitted, we'll process your request promptly. If you have any questions, contact us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    <script src="/form.min.js?ver=1"></script>
+    <div id="ll-form"></div>
+  </div>
+</section>
+{% endblock %}

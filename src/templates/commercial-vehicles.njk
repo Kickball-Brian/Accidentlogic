@@ -1,0 +1,11 @@
+{% set service = services[0] %}
+{% set pageTitle = service.title %}
+{% set pageHeading = service.heading %}
+{% set pageSubheading = service.subheading %}
+{% set pageDescription = service.metaDescription %}
+{% set slug = service.slug %}
+{% set contentInclude = "../content/commercial-vehicles.njk" %}
+{% extends "../layouts/service-page.njk" %}
+{% block title %}{{ service.metaTitle }}{% endblock %}
+{% block description %}{{ service.metaDescription }}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}{{ service.slug }}/">{% endblock %}
