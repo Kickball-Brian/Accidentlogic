@@ -1,0 +1,74 @@
+{
+  "rideshare-accidents": [
+    {
+      "q": "Whose insurance pays if I'm hurt in an Uber or Lyft accident?",
+      "a": "It depends on which 'period' the rideshare driver was in: offline (personal insurance), waiting for a request (limited rideshare coverage), or actively driving a passenger (the rideshare company's full $1M policy in most states). An attorney can identify the right coverage for your situation."
+    },
+    {
+      "q": "I was a passenger in the Uber — do I have a case?",
+      "a": "Yes. As a passenger you are almost never at fault, and Uber and Lyft both carry up to $1 million in liability coverage that applies to passengers during a trip. We connect you with attorneys who handle these claims regularly."
+    },
+    {
+      "q": "How long do I have to file a rideshare accident claim?",
+      "a": "The deadline (statute of limitations) depends on your state — typically two to four years from the date of the accident. Don't wait; evidence and witness recollection fade fast."
+    },
+    {
+      "q": "Does it cost anything to talk to an attorney?",
+      "a": "No. The attorneys in our network work on contingency — you pay nothing unless they recover compensation for you. The case evaluation is free."
+    }
+  ],
+  "pedestrian-accidents": [
+    {
+      "q": "What if the driver who hit me drove off?",
+      "a": "If the at-fault driver fled the scene, your own auto insurance may cover you under uninsured-motorist coverage even though you were on foot. An attorney can identify every available source of recovery."
+    },
+    {
+      "q": "I was crossing outside the crosswalk — can I still recover?",
+      "a": "Often yes. Most states use comparative fault, meaning you can still recover damages even if you were partly at fault. The driver's negligence still matters."
+    },
+    {
+      "q": "How long do pedestrian accident cases take to settle?",
+      "a": "Simple cases can resolve in a few months; cases involving serious injury or disputed liability can take a year or more. Your attorney will give you a realistic timeline based on your specific facts."
+    },
+    {
+      "q": "What damages can I recover?",
+      "a": "Medical bills (current and future), lost wages, pain and suffering, and in tragic cases, wrongful-death damages for surviving family members."
+    }
+  ],
+  "motorcycle-injury": [
+    {
+      "q": "Insurance is blaming me because I was on a motorcycle. What now?",
+      "a": "Insurance companies often try to shift blame to riders. An experienced motorcycle injury attorney pushes back with accident reconstruction, witness testimony, and evidence that establishes the actual fault."
+    },
+    {
+      "q": "Does not wearing a helmet hurt my case?",
+      "a": "It depends on the state and the injury. Even in helmet-required states, lack of a helmet usually only affects head-injury damages, not damages for other injuries the helmet wouldn't have prevented."
+    },
+    {
+      "q": "Can I recover for road rash and scarring?",
+      "a": "Yes. Road rash often leaves permanent scarring, and scarring damages are recoverable as part of pain and suffering."
+    },
+    {
+      "q": "What if the other driver had no insurance?",
+      "a": "Your own uninsured/underinsured-motorist coverage typically applies. We connect you with attorneys who know how to maximize that recovery."
+    }
+  ],
+  "commercial-vehicles": [
+    {
+      "q": "Why are truck accident cases different from regular car accidents?",
+      "a": "Trucking cases involve federal regulations (FMCSA hours-of-service, maintenance, drug testing), corporate defendants with deep-pocket policies, and time-sensitive evidence like ELD logs that can be overwritten. The right attorney preserves that evidence immediately."
+    },
+    {
+      "q": "Who can be held responsible besides the driver?",
+      "a": "Often the trucking company, its broker, the cargo loader, the maintenance contractor, or even the truck manufacturer if equipment failed. Multiple defendants usually mean more available coverage."
+    },
+    {
+      "q": "How long do I have to act?",
+      "a": "Federal preservation letters should go out fast — within days. The legal filing deadline (statute of limitations) is generally two to four years depending on your state."
+    },
+    {
+      "q": "What if my injuries are severe or permanent?",
+      "a": "Catastrophic-injury truck cases routinely settle in the high six or seven figures. Your attorney builds the medical and economic record needed to support that level of recovery."
+    }
+  ]
+}

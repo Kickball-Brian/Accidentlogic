@@ -1,6 +1,7 @@
 {% set pageHeading = "Thank You" %}
 {% set contentInclude = "../content/cm-thank-you.njk" %}
+{% set pageTitle = "Thank You | " ~ site.name %}
+{% set pageDescription = "Thanks for your submission — a member of our team will reach out shortly." %}
+{% set pageUrl = site.productionUrl ~ "cm-thank-you/" %}
 {% extends "../layouts/utility-page.njk" %}
-{% block title %}Thank You | {{ site.name }}{% endblock %}
-{% block description %}Thanks for your submission — a member of our team will reach out shortly.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}cm-thank-you/">{% endblock %}

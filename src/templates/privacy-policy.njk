@@ -1,7 +1,9 @@
+{% set slug = "privacy-policy" %}
 {% set pageHeading = "Privacy Policy" %}
 {% set pageEffectiveDate = "08/25/24" %}
 {% set contentInclude = "../content/privacy-policy.njk" %}
+{% set pageTitle = "Privacy Policy | " ~ site.name %}
+{% set pageDescription = "AccidentLogic's privacy policy: what information we collect, how we use it, and your rights." %}
+{% set pageUrl = site.productionUrl ~ "privacy-policy/" %}
 {% extends "../layouts/legal-page.njk" %}
-{% block title %}Privacy Policy | {{ site.name }}{% endblock %}
-{% block description %}AccidentLogic's privacy policy: what information we collect, how we use it, and your rights.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}privacy-policy/">{% endblock %}

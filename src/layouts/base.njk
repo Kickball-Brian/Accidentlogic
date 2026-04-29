@@ -3,11 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{{ site.name }}{% endblock %}</title>
-  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  {# Per-page set vars (pageTitle / pageDescription / pageOgImage / pageUrl)
+     drive title, description, OG, and Twitter meta. Fall back to site defaults. #}
+  {% set _t = pageTitle or site.name %}
+  {% set _d = pageDescription or site.description %}
+  {% set _img = pageOgImage or "images/og/default.png" %}
+  {% set _url = pageUrl or site.productionUrl %}
+  <title>{% block title %}{{ _t }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ _d }}{% endblock %}">
   {# STAGING: indexing disabled until prod push. Flip site.indexable to true and remove this meta to re-enable. #}
   <meta name="robots" content="noindex, nofollow">
   {% block canonical %}<link rel="canonical" href="{{ site.url }}">{% endblock %}
+
+  {# Favicons #}
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#c8102e">
+
+  {# Open Graph #}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ _t }}">
+  <meta property="og:description" content="{{ _d }}">
+  <meta property="og:url" content="{{ _url }}">
+  <meta property="og:image" content="{{ site.productionUrl }}{{ _img }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ _t }}">
+  <meta name="twitter:description" content="{{ _d }}">
+  <meta name="twitter:image" content="{{ site.productionUrl }}{{ _img }}">
+
   <link rel="stylesheet" href="/css/main.css">
   {% block head %}{% endblock %}
 

@@ -13,9 +13,11 @@ const env = nunjucks.configure(path.join(__dirname, 'src'), {
 const siteData = require('./src/data/site.json');
 const phoneData = require('./src/data/phones.json');
 const servicesData = require('./src/data/services.json');
+const faqsData = require('./src/data/faqs.json');
 env.addGlobal('site', siteData);
 env.addGlobal('phones', phoneData);
 env.addGlobal('services', servicesData);
+env.addGlobal('faqs', faqsData);
 
 const distDir = path.join(__dirname, 'dist');
 const distCssDir = path.join(distDir, 'css');
@@ -47,7 +49,7 @@ copyDirRecursive(path.join(__dirname, 'images'), path.join(distDir, 'images'));
 console.log('Copied: images/');
 
 // Copy static root files if present
-['form.min.js', 'sitemap.xml', 'robots.txt', '.htaccess', 'phone-config.js', 'favicon.ico'].forEach((f) => {
+['form.min.js', 'sitemap.xml', 'robots.txt', '.htaccess', 'phone-config.js', 'favicon.ico', 'apple-touch-icon.png', 'site.webmanifest'].forEach((f) => {
   const src = path.join(__dirname, f);
   if (fs.existsSync(src)) {
     fs.copyFileSync(src, path.join(distDir, f));

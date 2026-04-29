@@ -1,6 +1,7 @@
+{% set pageTitle = "Opt Out | " ~ site.name %}
+{% set pageDescription = "Opt out of communications from AccidentLogic. We'll remove your information promptly." %}
+{% set pageUrl = site.productionUrl ~ "opt-out/" %}
 {% extends "../layouts/base.njk" %}
-{% block title %}Opt Out | {{ site.name }}{% endblock %}
-{% block description %}Opt out of communications from AccidentLogic. We'll remove your information promptly.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}opt-out/">{% endblock %}
 
 {% block content %}

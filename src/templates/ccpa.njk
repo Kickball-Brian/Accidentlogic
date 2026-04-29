@@ -1,6 +1,7 @@
+{% set pageTitle = "CCPA Request Webform | " ~ site.name %}
+{% set pageDescription = "California residents — submit a CCPA request to access, delete, or opt out of the sale of your personal information." %}
+{% set pageUrl = site.productionUrl ~ "ccpa/" %}
 {% extends "../layouts/base.njk" %}
-{% block title %}CCPA Request Webform | {{ site.name }}{% endblock %}
-{% block description %}California residents — submit a CCPA request to access, delete, or opt out of the sale of your personal information.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}ccpa/">{% endblock %}
 
 {% block content %}

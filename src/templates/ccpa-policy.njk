@@ -1,7 +1,9 @@
+{% set slug = "ccpa-policy" %}
 {% set pageHeading = "California Privacy Rights" %}
 {% set pageEffectiveDate = "08/25/24" %}
 {% set contentInclude = "../content/ccpa-policy.njk" %}
+{% set pageTitle = "CCPA Policy | " ~ site.name %}
+{% set pageDescription = "California Consumer Privacy Act (CCPA) disclosures and your rights as a California resident." %}
+{% set pageUrl = site.productionUrl ~ "ccpa-policy/" %}
 {% extends "../layouts/legal-page.njk" %}
-{% block title %}CCPA Policy | {{ site.name }}{% endblock %}
-{% block description %}California Consumer Privacy Act (CCPA) disclosures and your rights as a California resident.{% endblock %}
 {% block canonical %}<link rel="canonical" href="{{ site.productionUrl }}ccpa-policy/">{% endblock %}
